@@ -110,7 +110,7 @@ def model_load(fn):
 import os
 import hashlib
 
-fn = 'corpus.{}.data'.format(hashlib.md5(args.data.encode()).hexdigest()) if not self.reverse else\
+fn = 'corpus.{}.data'.format(hashlib.md5(args.data.encode()).hexdigest()) if not args.reverse else\
     'reverse_corpus.{}.data'.format(hashlib.md5(args.data.encode()).hexdigest()) 
 
 if args.philly:
@@ -120,7 +120,7 @@ if os.path.exists(fn):
     corpus = torch.load(fn)
 else:
     print('Producing dataset...')
-    corpus = data.Corpus(args.data, self.reverse)
+    corpus = data.Corpus(args.data, args.reverse)
     torch.save(corpus, fn)
 
 eval_batch_size = 10
