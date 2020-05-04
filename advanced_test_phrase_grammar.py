@@ -119,7 +119,7 @@ def mean(x):
     return sum(x) / len(x)
 
 
-def test(model, corpus, cuda, weight, prt=False, figure):
+def test(model, corpus, cuda, weight, figure, prt=False):
 
     '''
     weight: weights for each distance, np.arrary
