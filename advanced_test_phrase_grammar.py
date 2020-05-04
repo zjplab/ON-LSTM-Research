@@ -157,7 +157,7 @@ def test(model, corpus, cuda, weight, figure, prt=False):
 
         distance = model.distance[0].squeeze().data.cpu().numpy()
         distance_in = model.distance[1].squeeze().data.cpu().numpy()
-        combined_dis= np.arrary([distance, distance_in])
+        combined_dis= np.array([distance, distance_in])
     
         nsens += 1
         if prt and nsens % 100 == 0:
