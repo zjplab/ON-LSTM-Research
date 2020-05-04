@@ -300,4 +300,4 @@ if __name__ == '__main__':
     corpus = data_ptb.Corpus(args.data)
     corpus.dictionary = dictionary
 
-    test(model, corpus, args.cuda, weights=args.gate ,prt=True, figure=args.figure)
+    test(model, corpus, args.cuda, weight=args.gate ,prt=True, figure=args.figure)
