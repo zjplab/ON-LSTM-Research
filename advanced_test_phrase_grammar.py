@@ -218,7 +218,7 @@ def test(model, corpus, cuda, weight, figure, prt=False):
             plt.xlim(xmin=-0.5, xmax=distance.shape[1] - 0.5)
             plt.xticks(numpy.arange(distance.shape[1]), sen, fontsize=10, rotation=45)
 
-            plt.savefig('%s_figure/%d.png' % (figure, nsens))
+            plt.savefig('figure/%s_%d.png' % (figure, nsens))
             plt.close()
 
     prec_list, reca_list, f1_list \
