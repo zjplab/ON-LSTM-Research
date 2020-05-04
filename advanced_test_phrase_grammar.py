@@ -123,9 +123,9 @@ def mean(x):
 def test(model, corpus, cuda, weight, figure, prt=False):
 
     '''
-    weight: weights for each distance, np.arrary
+    weight: weights for each distance, np.array
     '''
-    weight=np.arrary(eval(weight))
+    weight=np.array(eval(weight))
     model.eval()
 
     prec_list = []
