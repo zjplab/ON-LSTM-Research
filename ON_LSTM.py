@@ -73,7 +73,7 @@ class ONLSTMCell(nn.Module):
         self.drop_weight_modules = [self.hh]
 
     def forward(self, input, hidden,
-                transformed_input=None):
+                transformed_input):
         hx, cx = hidden #hidden states, cell states
 
         if transformed_input is None:
