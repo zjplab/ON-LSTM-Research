@@ -156,7 +156,7 @@ class ONLSTMStack(nn.Module):
             for t in range(length):
                 hidden, cell, d = self.cells[l](
                     None, prev_state[l],
-                    transformed_input=t_input[t]
+                    t_input[t] #remove keyword argument
                 )
                 prev_state[l] = hidden, cell  # overwritten every timestep
                 curr_layer[t] = hidden
